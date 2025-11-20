@@ -1,0 +1,43 @@
+// Write a program to print the following pattern:
+
+//    *
+//   ***
+//  *****
+// *******
+//  *****
+//   ***
+//    *
+#include <stdio.h>
+int main()
+{
+    int n,i,j,s;
+    printf("Enter number of rows: ");
+    scanf("%d",&n);
+    for(i = 1; i <= n; i++)
+    {
+        s=n-i;
+        for(j=1;j<=s;j++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=2*i-1;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for(i=n-1;i>=1;i--) 
+    {
+        s=n-i;
+        for(j=1;j<=s;j++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=2*i-1;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
